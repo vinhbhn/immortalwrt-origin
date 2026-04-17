@@ -154,6 +154,9 @@ mediatek_setup_interfaces()
 	tplink,tl-7dr7230-v2)
 		ucidef_set_interfaces_lan_wan "lan1 lan2 lan3 lan4" wan
 		;;
+	sdmc,nr3053)
+		ucidef_set_interfaces_lan_wan "lan1 lan2 lan3" wan
+		;;
 	xiaomi,mi-router-ax3000t|\
 	xiaomi,mi-router-ax3000t-ubootmod|\
 	xiaomi,mi-router-wr30u-stock|\
@@ -226,6 +229,10 @@ mediatek_setup_macs()
 	xiaomi,redmi-router-ax6000-stock|\
 	xiaomi,redmi-router-ax6000-ubootmod)
 		wan_mac=$(mtd_get_mac_ascii Bdata ethaddr_wan)
+		label_mac=$wan_mac
+		;;
+	sdmc,nr3053)
+		wan_mac=$(mtd_get_mac_binary Factory 4)
 		label_mac=$wan_mac
 		;;
 	yuncore,ax835)

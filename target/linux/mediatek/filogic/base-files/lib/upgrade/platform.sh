@@ -101,6 +101,7 @@ platform_do_upgrade() {
 	tplink,tl-xdr6088|\
 	tplink,tl-xtr8488|\
 	xiaomi,mi-router-ax3000t-ubootmod|\
+	sdmc,nr3053|\
 	xiaomi,redmi-router-ax6000-ubootmod|\
 	xiaomi,mi-router-wr30u-ubootmod|\
 	zyxel,ex5601-t0-ubootmod)
